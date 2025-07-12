@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Para Moni con Cariño ❤️</title>
+    <!-- Hoja de estilos principal (tipografía y efectos de imagen) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Estilos extra para darle un look más amoroso y sencillo -->
+    <style>
+        /* Fondo en degradado suave */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #ffe6f5 0%, #fafafa 100%);
+            font-family: "Arial", sans-serif;
+            color: #333;
+        }
+
+        /* Encabezados centrados y color principal */
+        h1, h2, h3 {
+            text-align: center;
+            margin: 12px 8px;
+        }
+        h1 {
+            color: #b400cc;
+            font-size: 2.2rem;
+        }
+        h2 {
+            color: #a000b3;
+        }
+
+        /* Galería en modo flex */
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 24px;
+        }
+
+        /* Tarjeta indivual de imagen + mensaje */
+        .bloque {
+            background: #ffffff;
+            padding: 16px;
+            border-radius: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            width: 260px;
+        }
+        .bloque:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+        }
+        .bloque img {
+            width: 220px;
+            border-radius: 12px;
+        }
+        .bloque p {
+            margin-top: 12px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #b400cc;
+        }
+
+        /* Footer sencillo */
+        .footer {
+            margin-top: auto;
+            padding: 24px 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>¡Hola, Moni! 🤍</h1>
+    <p style="font-size: 1.1rem; text-align:center; max-width: 600px;">Esta es una página que hice con mucho cariño para recordarte lo especial que eres para mí. Cada imagen lleva un pedacito de mi corazón.</p>
+
+    <h2>Galería de amor</h2>
+
+    <div class="galeria">
+        <!-- 1. Corazoncito -->
+        <div class="bloque">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Corazoncito">
+            <p>Soy un corazoncito 💖</p>
+        </div>
+
+        <!-- 2. Gatitos -->
+        <div class="bloque">
+            <img src="{{ url_for('static', filename='gatitos.png') }}" alt="Gatitos">
+            <p>Somos gatitos 🐱🐱</p>
+        </div>
+
+        <!-- 3. Perritos -->
+        <div class="bloque">
+            <img src="{{ url_for('static', filename='perritos.png') }}" alt="Perritos">
+            <p>Somos perritos 🐶🐶</p>
+        </div>
+    </div>
+
+    <h3>¡Eres increíble y te admiro un montón! 😻</h3>
+
+    <div class="footer">Hecho con &hearts; por Victor</div>
+</body>
+</html>
+
